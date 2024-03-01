@@ -99,10 +99,9 @@ public:
   void serviceCall() 
   {
     // Check if the action is available
-    if (!actionClient_->wait_for_action_server(std::chrono::seconds(10))) 
+    while (!actionClient_->wait_for_action_server(std::chrono::seconds(10))) 
     {
         RCLCPP_INFO(this->get_logger(), "Action was not started");
-        return;
     }
     // Create the goal
     auto goalMsg = GoToPointAction::Goal();
