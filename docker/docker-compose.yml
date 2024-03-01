@@ -1,0 +1,44 @@
+version: '3'
+
+networks:
+  simulation_net:
+    driver: bridge
+
+
+services:
+  tortoise_ros2_sim:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tortoise_ros2_container
+    hostname: tortoise_ros2_container
+    restart: "no"
+    networks:
+      - simulation_net
+    command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True'"
+
+  tortoise_ros2_waypoint:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tortoise_ros2_waypoint_container
+    hostname: tortoise_ros2_waypoint_container
+    restart: "no"
+    networks:
+      - simulation_net
+    command: "bash -c 'source /root/ros2_ws/install/setup.bash && \
+                       sleep 20 && \ 
+                       ros2 run tortoisebot_waypoints main'"
+
+  tortoise_ros2_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tortoise_ros2_test_container
+    hostname: tortoise_ros2_test_container
+    restart: "no"
+    networks:
+      - simulation_net
+    command: "bash -c 'source /root/ros2_ws/install/setup.bash && \
+                       sleep 20 && \ 
+                       colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"

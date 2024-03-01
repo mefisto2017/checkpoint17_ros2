@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000852] (tortoisebot_waypoints) JobQueued: {'identifier': 'tortoisebot_waypoints', 'dependencies': OrderedDict([('tortoisebot_waypoints', '/home/user/ros2_ws/src/ros2_ci/docker/install/tortoisebot_waypoints')])}
+[0.000950] (tortoisebot_waypoints) JobStarted: {'identifier': 'tortoisebot_waypoints'}
+[0.008593] (tortoisebot_waypoints) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_cmake/test.py", line 29, in test\n    return await extension.test()\n  File "/usr/lib/python3/dist-packages/colcon_cmake/task/cmake/test.py", line 45, in test\n    assert os.path.exists(args.build_base), \\\nAssertionError: Has this package been built before?\n'}
+[0.009393] (tortoisebot_waypoints) JobEnded: {'identifier': 'tortoisebot_waypoints', 'rc': 1}
+[0.022732] (-) EventReactorShutdown: {}
