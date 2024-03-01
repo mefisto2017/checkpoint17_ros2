@@ -63,6 +63,11 @@ def generate_launch_description():
         executable='raspicam2_node',
         name='pi_camera',
     )
+    waypoint_node = Node(
+        package='tortoisebot_waypoints',
+        executable='main',
+        name='waypoint_action',
+    )
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -94,6 +99,7 @@ def generate_launch_description():
         differential_drive_node,
         gazebo_launch_cmd,
         camera_node,
+        waypoint_node,
         # rviz_launch_cmd
 
     ]

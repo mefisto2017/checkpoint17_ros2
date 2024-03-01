@@ -8,5 +8,5 @@ services:
     container_name: tortoise_ros2_container
     hostname: tortoise_ros2_container
     restart: "no"
-    command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True & ros2 run tortoisebot_waypoints main & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
+    command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
 
