@@ -77,7 +77,7 @@ public:
   {
     auto request = std::make_shared<std_srvs::srv::Empty::Request>();
     // Check if the service is available
-    if (!gazebo_client_->wait_for_service(std::chrono::seconds(1))) 
+    if (!gazebo_client_->wait_for_service(std::chrono::seconds(10))) 
     {
         RCLCPP_INFO(this->get_logger(), "Gazebo world was not started");
         return;
@@ -99,7 +99,7 @@ public:
   void serviceCall() 
   {
     // Check if the action is available
-    if (!actionClient_->wait_for_action_server(std::chrono::seconds(1))) 
+    if (!actionClient_->wait_for_action_server(std::chrono::seconds(10))) 
     {
         RCLCPP_INFO(this->get_logger(), "Action was not started");
         return;
