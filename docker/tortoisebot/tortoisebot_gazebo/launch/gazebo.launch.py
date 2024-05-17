@@ -11,7 +11,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     return launch.LaunchDescription([
-        launch.actions.ExecuteProcess(cmd=['gzserver', '--verbose', '--headless', '-s', 
+        launch.actions.ExecuteProcess(cmd=['gz', '--verbose', '-s', 
                                             'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so',world_path], 
                                            output='screen'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='False',
