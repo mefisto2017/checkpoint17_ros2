@@ -45,13 +45,13 @@ Repository for CI/CD based on Jenkins and a tortoisebot
    ```
 2. Docker instalation
    ```sh
-   sudo apt-get update
-   sudo apt-get install -y docker.io docker-compose
+   sudo apt-get update && \
+   sudo apt-get install -y docker.io docker-compose && \
    sudo service docker start
    ```
 3. Docker configuration
    ```sh
-   sudo usermod -aG docker $USER
+   sudo usermod -aG docker $USER && \
    newgrp docker
    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -60,25 +60,25 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 <!-- USAGE of the simulation -->
 ## Usage Simulation
 1. Test:
-```sh
-cd /home/user/ros2_ws/src/ros2_ci/docker && \
-docker-compose up
-```
+  ```sh
+  cd /home/user/ros2_ws/src/ros2_ci/docker && \
+  docker-compose up
+  ```
 
 ## Jenkin Test
 1. Start jenkins:
-```sh
-bash ~/webpage_ws/start_jenkins.bash
-```
+  ```sh
+  bash ~/webpage_ws/start_jenkins.bash
+  ```
 2. Copy the url from :
-```sh
-~/jenkins__pid__url.txt
-```
+  ```sh
+  cat ~/jenkins__pid__url.txt
+  ```
 3. Log :
-```sh
-user: admin
-pw: 402e4b9cc7c744f19249c186070498fa
-```
+  ```sh
+  user: admin
+  pw: 402e4b9cc7c744f19249c186070498fa
+  ```
 4. Modify the README.MD file
 
 5. Create a pull-request
