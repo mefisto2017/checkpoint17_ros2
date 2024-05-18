@@ -8,12 +8,12 @@ services:
     container_name: tortoise_ros2_container
     hostname: tortoise_ros2_container
     restart: "no"
+    # HEADLESS GAZEBO
+    #command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
+    # FUCKING STUPID GAZEBO, SO GIRISH IS HAPPY
     environment:
       - DISPLAY=$DISPLAY
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
-    # HEADLESS GAZEBO
-    #command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
-    # FUCKING STUPID GAZEBO, SO GIRISH IS HAPPY
     command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup_gazebo.launch.py use_sim_time:=True & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
 
