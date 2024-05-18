@@ -58,14 +58,14 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 
 
 <!-- USAGE of the simulation -->
-## Usage Simulation
+## Simulation Usage 
 1. Test:
   ```sh
   cd /home/user/ros2_ws/src/ros2_ci/docker && \
   docker-compose up
   ```
 
-## Jenkin Test
+## Jenkins Test
 1. Start jenkins:
   ```sh
   bash ~/webpage_ws/start_jenkins.bash
