@@ -10,7 +10,7 @@ services:
     restart: "no"
     # HEADLESS GAZEBO
     #command: "bash -c 'source /root/ros2_ws/install/setup.bash && ros2 launch tortoisebot_bringup bringup.launch.py use_sim_time:=True & colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'"
-    # FUCKING STUPID GAZEBO, SO GIRISH IS HAPPY
+    # GAZEBO VIS
     environment:
       - DISPLAY=$DISPLAY
     volumes:
