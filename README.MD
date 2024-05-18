@@ -37,14 +37,16 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 
 <!-- INSTALLATION -->
 ### Installation
-1. Clone the repo
+1. Clone the repo inside ros2_ws/src/
    ```sh
-   git clone https://github.com/mefisto2017/checkpoint17_ros2
+   cd /home/user/ros2_ws/src && \
+   git clone https://github.com/mefisto2017/checkpoint17_ros2 && \
+   mv checkpoint17_ros2 ros2_ci
    ```
 2. Docker instalation
    ```sh
    sudo apt-get update
-   sudo apt-get install docker.io docker-compose
+   sudo apt-get install -y docker.io docker-compose
    sudo service docker start
    ```
 3. Docker configuration
@@ -59,7 +61,7 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 ## Usage Simulation
 1. Test:
 ```sh
-cd docker
+cd /home/user/ros2_ws/src/ros2_ci/docker && \
 docker-compose up
 ```
 
@@ -79,4 +81,4 @@ pw: 402e4b9cc7c744f19249c186070498fa
 ```
 4. Modify the README.MD file
 
-5. Push the changes by loading the id_rsa file (catkin_ws/src/ros1_ci) to the ssh-agent, password is empty.
+5. Create a pull-request
