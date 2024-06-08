@@ -40,7 +40,7 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 1. Clone the repo inside ros2_ws/src/
    ```sh
    cd /home/user/ros2_ws/src && \
-   git clone https://github.com/mefisto2017/checkpoint17_ros2 && \
+   git clone https://github.com/pvela2017/checkpoint17_ros2 && \
    mv checkpoint17_ros2 ros2_ci
    ```
 2. Docker instalation
