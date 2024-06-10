@@ -1,36 +1,21 @@
-# Checkpoint 17
+# Checkpoint 17 CICD For Robotics
 
 <a name="readme-top"></a>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#software-prerequisites">Software Prerequisites</a></li>
-        <li><a href="#hardware-prerequisites">Hardware Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage-simulation">Usage Simulation</a></li>
-  </ol>
-</details>
-
-
 ## About The Project
-Repository for CI/CD based on Jenkins and a tortoisebot
+This project focuses on setting up a continuous integration (CI) pipeline using Jenkins for a robotics simulation environment. The objective is to automate the CI process, triggering it whenever a commit is pushed to a remote repository. This ensures that the code is continuously tested and validated, promoting a more efficient and error-free development process.
 
+![This is an image](images/preview.png)
+
+> __Warning__
+ This project requires files not provided on this repository.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 ### Software Prerequisites
-* ROS Noetic
+* Ubuntu 20.04
+* ROS2 Galactic
 * Docker
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -40,8 +25,8 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 1. Clone the repo inside ros2_ws/src/
    ```sh
    cd /home/user/ros2_ws/src && \
-   git clone https://github.com/pvela2017/checkpoint17_ros2 && \
-   mv checkpoint17_ros2 ros2_ci
+   git clone https://github.com/pvela2017/The-Construct-CheckPoint-17-CI-CD-ROS2 && \
+   mv The-Construct-CheckPoint-17-CI-CD-ROS2 ros2_ci
    ```
 2. Docker instalation
    ```sh
@@ -82,3 +67,9 @@ Repository for CI/CD based on Jenkins and a tortoisebot
 4. Modify the README.MD file
 
 5. Create a pull-request
+
+
+<!-- KEYS -->
+## Key topics learnt
+* Setup Jenkins.
+* Run Gazebo Headless.
