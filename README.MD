@@ -70,6 +70,6 @@ This project focuses on setting up a continuous integration (CI) pipeline using 
 
 
 <!-- KEYS -->
-## Key topics learnt
+## Key Topics Learnt
 * Setup Jenkins.
 * Run Gazebo Headless.
